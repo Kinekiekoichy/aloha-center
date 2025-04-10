@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learn more about the mission, vision, and team behind Aloha Healing Center." />
+  <meta name="description" content="Learn more about the mission, vision, team, and energy healing technology behind Aloha Healing Center." />
   <title>About Us | Aloha Healing Center</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
@@ -106,25 +106,38 @@
       border-radius: 50%;
       margin-bottom: 0.5rem;
     }
+    .video-section, .tls-section {
+      margin-top: 3rem;
+      text-align: center;
+    }
+    .video-section iframe {
+      width: 100%;
+      max-width: 720px;
+      height: 405px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .tls-section ul {
+      text-align: left;
+      max-width: 700px;
+      margin: 1rem auto;
+      padding-left: 1.5rem;
+      line-height: 1.8;
+    }
+    .tls-section a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #2e856e;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+    }
   </style>
 </head>
 <body>
-  <div id="header-placeholder"></div>
-
-<script>
-  fetch("/header.html")
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById("header-placeholder").innerHTML = html;
-    });
-
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.nav-container')) {
-      document.body.classList.remove('nav-open');
-    }
-  });
-</script>
-
   <header>
     <h1>About Aloha Healing Center</h1>
   </header>
@@ -158,12 +171,12 @@
         </div>
         <div class="member">
           <img src="/images/staff2.jpg" alt="Staff Member 2">
-          <h3>Jessica Houtz</h3>
+          <h3>Jane Heartstone</h3>
           <p>Wellness Guide</p>
         </div>
         <div class="member">
           <img src="/images/staff3.jpg" alt="Staff Member 3">
-          <h3>XXXXXXX</h3>
+          <h3>Michael Lumiere</h3>
           <p>Energy Practitioner</p>
         </div>
       </div>
@@ -172,6 +185,23 @@
       <h2>Client Testimonials</h2>
       <p>“The sessions here have completely shifted my energy. I feel more grounded, alive, and in flow.” – Sarah M.</p>
       <p>“It’s like nothing I’ve ever experienced. I now bring my whole family.” – Jason K.</p>
+    </section>
+    <section class="video-section">
+      <h2>What is the Light System?</h2>
+      <p>Watch this video to understand the powerful energy technology used in our healing center.</p>
+      <iframe src="https://www.youtube.com/embed/9krozcwQ8Rk" allowfullscreen></iframe>
+    </section>
+    <section class="tls-section">
+      <h2>Learn More About The Light System</h2>
+      <p>The Light System™ is a proprietary energy wellness technology that enhances the body’s natural healing capabilities using light, scalar energy, sacred geometry, and affirmations.</p>
+      <ul>
+        <li>✨ Stimulates cognitive function and neural clarity</li>
+        <li>🔋 Boosts cellular charge, pH balance, and oxygenation</li>
+        <li>🌈 Uses sacred geometry and color therapy for energetic harmony</li>
+        <li>🧘 Facilitates deep emotional release and spiritual expansion</li>
+        <li>💫 Aligns your electromagnetic field with coherent energy patterns</li>
+      </ul>
+      <a href="/downloads/TLS-HANDBOOK.pdf" target="_blank">📘 View TLS Handbook</a>
     </section>
   </main>
   <footer>
@@ -184,13 +214,5 @@
       }
     });
   </script>
-  <script>
-    fetch("/footer.html")
-      .then(res => res.text())
-      .then(html => {
-        document.body.insertAdjacentHTML("beforeend", html);
-      });
-  </script>
-  
 </body>
 </html>

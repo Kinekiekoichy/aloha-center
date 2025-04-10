@@ -86,29 +86,22 @@
     }
     h2 {
       color: #2e856e;
+      text-align: center;
     }
     ul {
       padding-left: 1.2rem;
+      line-height: 1.8;
+    }
+    section {
+      margin-bottom: 3rem;
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
   </style>
 </head>
 <body>
-  <div id="header-placeholder"></div>
-
-<script>
-  fetch("/header.html")
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById("header-placeholder").innerHTML = html;
-    });
-
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.nav-container')) {
-      document.body.classList.remove('nav-open');
-    }
-  });
-</script>
-
   <header>
     <h1>Preparing for Your Session</h1>
   </header>
@@ -131,34 +124,34 @@
     <section>
       <h2>Before Your Session</h2>
       <ul>
-        <li>Stay well hydrated—drink plenty of water the day before and day of your session.</li>
-        <li>Wear comfortable, relaxed clothing.</li>
-        <li>Avoid heavy meals or stimulants such as caffeine right before your visit.</li>
-        <li>Arrive a few minutes early to center yourself and prepare mentally for healing.</li>
+        <li>💧 Stay well hydrated—drink plenty of water the day before and day of your session.</li>
+        <li>👕 Wear comfortable, relaxed clothing.</li>
+        <li>☕ Avoid heavy meals or stimulants such as caffeine right before your visit.</li>
+        <li>🧘 Arrive a few minutes early to center yourself and prepare mentally for healing.</li>
       </ul>
     </section>
 
     <section>
       <h2>During Your Session</h2>
       <ul>
-        <li>You’ll be seated or reclining in a serene, energy-enhanced environment.</li>
-        <li>We recommend closing your eyes and focusing on your breath or meditative thoughts.</li>
-        <li>Some people sleep, others enter deep meditative states—go with what feels natural.</li>
+        <li>🛏️ You'll be seated or reclining in a serene, energy-enhanced environment.</li>
+        <li>😌 We recommend closing your eyes and focusing on your breath or meditative thoughts.</li>
+        <li>💤 Some people sleep, others enter deep meditative states—go with what feels natural.</li>
       </ul>
     </section>
 
     <section>
       <h2>After Your Session</h2>
       <ul>
-        <li>Continue drinking water to support detoxification.</li>
-        <li>Rest if needed. Your body may be processing and realigning energy.</li>
-        <li>Consider taking a sea salt bath or foot soak to aid energetic clearing.</li>
-        <li>Listen to your body and nourish it with healthy food and sleep.</li>
+        <li>🚰 Continue drinking water to support detoxification.</li>
+        <li>🛀 Rest if needed. Your body may be processing and realigning energy.</li>
+        <li>🧂 Consider taking a sea salt bath or foot soak to aid energetic clearing.</li>
+        <li>🍃 Listen to your body and nourish it with healthy food and sleep.</li>
       </ul>
     </section>
   </main>
   <footer>
-    <p>&copy; 2025 Aloha Healing Center</p>
+    <p>&copy; 2025 Aloha Healing Center. All rights reserved.</p>
   </footer>
   <script>
     document.addEventListener('click', (e) => {
@@ -167,12 +160,5 @@
       }
     });
   </script>
-<script>
-  fetch("/footer.html")
-    .then(res => res.text())
-    .then(html => {
-      document.body.insertAdjacentHTML("beforeend", html);
-    });
-</script>
 </body>
 </html>

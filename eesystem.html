@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learn what the Energy Enhancement System is and how it works to support healing and wellness at Aloha Healing Center." />
-  <title>What is the Energy Enhancement System? | Aloha</title>
+  <meta name="description" content="Explore how the Energy Enhancement System (EESystem) works and its scientifically supported health benefits at Aloha Healing Center." />
+  <title>EESystem Info | Aloha Healing Center</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      margin: 0;
       font-family: 'Open Sans', sans-serif;
-      background: #f9fdfc;
+      margin: 0;
+      background-color: #f9fdfc;
       color: #333;
     }
     header, footer {
@@ -18,99 +18,161 @@
       text-align: center;
       padding: 1.5rem;
     }
-    nav {
+    .navbar {
+      position: sticky;
+      top: 0;
       background-color: #cdeae2;
-      padding: 1rem;
-      text-align: center;
+      z-index: 1000;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
     }
-    nav a {
-      margin: 0 1rem;
+    .nav-container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .nav-logo {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #2e856e;
+      text-decoration: none;
+    }
+    .nav-toggle {
+      font-size: 1.8rem;
+      cursor: pointer;
+      display: none;
+      color: #2e856e;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .nav-links a {
       text-decoration: none;
       color: #2e856e;
       font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    .nav-links a:hover {
+      color: #145f4a;
+    }
+    @media (max-width: 768px) {
+      .nav-toggle {
+        display: block;
+      }
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background-color: #cdeae2;
+        padding: 1rem 0;
+      }
+      body.nav-open .nav-links {
+        display: flex;
+      }
+      .nav-links a {
+        padding: 0.5rem 1rem;
+        text-align: center;
+      }
     }
     main {
-      max-width: 800px;
-      margin: 0 auto;
+      max-width: 1000px;
+      margin: auto;
       padding: 2rem;
-    }
-    section {
-      margin-bottom: 2rem;
     }
     h2 {
       color: #2e856e;
+      text-align: center;
+    }
+    section {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
     ul {
-      padding-left: 1.2rem;
+      padding-left: 1.5rem;
+      line-height: 1.7;
+    }
+    a.download {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #2e856e;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
     }
   </style>
 </head>
 <body>
-  <div id="header-placeholder"></div>
-
-<script>
-  fetch("/header.html")
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById("header-placeholder").innerHTML = html;
-    });
-
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.nav-container')) {
-      document.body.classList.remove('nav-open');
-    }
-  });
-</script>
-
   <header>
-    <h1>Energy Enhancement System</h1>
+    <h1>About the Energy Enhancement System</h1>
   </header>
-  <nav>
-    <a href="/index.html">Home</a>
-    <a href="/eesystem.html">EESystem Info</a>
-    <a href="/session-preparation.html">Preparation</a>
-    <a href="/bookings.html">Bookings</a>
-    <a href="/about.html">About</a>
-    <a href="/contact.html">Contact</a>
-    <a href="/events.html">Events</a>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/index.html" class="nav-logo">Aloha</a>
+      <div class="nav-toggle" onclick="document.body.classList.toggle('nav-open')">☰</div>
+      <div class="nav-links">
+        <a href="/index.html">Home</a>
+        <a href="/eesystem.html">EESystem Info</a>
+        <a href="/session-preparation.html">Preparation</a>
+        <a href="/bookings.html">Bookings</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/events.html">Events</a>
+      </div>
+    </div>
   </nav>
   <main>
     <section>
-      <h2>What is EESystem?</h2>
-      <p>The Energy Enhancement System (EESystem) combines body, mind, spirit, and science to help you achieve peak performance and reach higher states of health, consciousness, and self-actualization. This technology generates multiple bio-active life-enhancing energy fields including scalar waves and a morphogenic energy field—also known as a torsion field or zero-point energy field. It creates a highly charged environment that enables the body to repair, regenerate, and rebalance itself.</p>
+      <h2>What is the EESystem?</h2>
+      <p>The Energy Enhancement System (EESystem) generates multiple bio-active life-enhancing energy fields, including scalar waves and biophotonic light, to promote optimal wellness. Developed by Dr. Sandra Rose Michael, it combines quantum science and ancient healing wisdom to elevate the human experience and support the body's ability to heal itself.</p>
     </section>
+
     <section>
       <h2>How It Works</h2>
-      <p>The EESystem uses scalar energy and photonic light to stimulate the body’s energy fields and support self-healing. The system creates an environment that promotes cell regeneration, detoxification, immune function, pain relief, and much more—all while you relax in a peaceful setting.</p>
-    </section>
-    <section>
-      <h2>Research & Scientific Support</h2>
-      <p>Numerous case studies and independent research projects support the efficacy of the EESystem. Some findings include:</p>
       <ul>
-        <li>Enhanced mitochondrial function</li>
-        <li>Reduction in markers of inflammation</li>
-        <li>Increased cellular oxygenation</li>
-        <li>Improved HRV (Heart Rate Variability)</li>
+        <li>💡 Generates scalar energy fields that support DNA repair, detox, and anti-aging benefits.</li>
+        <li>🌈 Incorporates color and light therapy to balance the energetic and physical body.</li>
+        <li>🔬 Based on principles of sacred geometry and quantum coherence.</li>
+        <li>⚡ Enhances mitochondrial function, energy levels, and mental clarity.</li>
       </ul>
-      <p>For a deeper look, visit our <a href="/research.html">Research Page</a>.</p>
     </section>
+
     <section>
-      <h2>FAQs</h2>
-      <p><strong>Q: Is the EESystem safe?</strong><br />A: Yes, it’s completely non-invasive and safe for all ages.</p>
-      <p><strong>Q: How long are sessions?</strong><br />A: Sessions typically range from 1 to 2 hours, with overnight options available.</p>
-      <p><strong>Q: What should I wear?</strong><br />A: Comfortable clothing is recommended. You’ll be relaxing during the session.</p>
+      <h2>Research Highlights</h2>
+      <p>Scientific and experiential evidence suggests that regular exposure to EESystem sessions may contribute to:</p>
+      <ul>
+        <li>Improved circulation, oxygenation, and cellular hydration</li>
+        <li>Detoxification at a deep energetic level</li>
+        <li>Enhanced immune function and recovery</li>
+        <li>Increased cellular voltage and repair capability</li>
+        <li>Better sleep, reduced inflammation, and a calm mental state</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Further Learning</h2>
+      <p>To explore the science, testimonials, and transformational potential of this technology in depth, download the official handbook below.</p>
+      <a href="/downloads/TLS-HANDBOOK.pdf" target="_blank" class="download">📘 Download TLS Handbook</a>
     </section>
   </main>
   <footer>
-    <p>&copy; 2025 Aloha Healing Center</p>
+    <p>&copy; 2025 Aloha Healing Center. All rights reserved.</p>
   </footer>
   <script>
-    fetch("/footer.html")
-      .then(res => res.text())
-      .then(html => {
-        document.body.insertAdjacentHTML("beforeend", html);
-      });
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.nav-container')) {
+        document.body.classList.remove('nav-open');
+      }
+    });
   </script>
-  
 </body>
 </html>
