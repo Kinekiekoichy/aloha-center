@@ -20,9 +20,16 @@
       padding: 2rem;
       text-align: center;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
+    nav {
+      background-color: #e6f4ee;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #2e856e;
+      font-weight: 600;
     }
     .hero {
       background: url('your-image.jpg') center/cover no-repeat;
@@ -63,14 +70,27 @@
   </style>
 </head>
 <body>
+
   <header>
     <h1>Aloha Healing Center</h1>
   </header>
+
+  <nav>
+    <a href="/index.html">Home</a>
+    <a href="/eesystem.html">EESystem Info</a>
+    <a href="/session-preparation.html">Preparation</a>
+    <a href="/bookings.html">Bookings</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/events.html">Events</a>
+  </nav>
+
   <div class="hero">
     <h2>Welcome to the Energy Enhancement System</h2>
     <p>Experience deep cellular healing and holistic rejuvenation.</p>
     <a href="https://calendly.com/admin-aloha-center/" target="_blank">Book a Session</a>
   </div>
+
   <section>
     <h2>Benefits Overview</h2>
     <div class="benefits">
@@ -83,44 +103,19 @@
       <div>Increased Energy</div>
     </div>
   </section>
+
   <section>
     <h2>What Our Clients Say</h2>
     <div class="testimonial-preview">
-      <p>"I feel more energized and alive after every session. This system is truly transformative!" - Jane D.</p>
+      <p>"I feel more energized and alive after every session. This system is truly transformative!" – Jane D.</p>
       <a href="/testimonials.html">Read More Testimonials</a>
     </div>
   </section>
-  <!-- Begin Brevo Form -->
-  <!-- START - We recommend to place the below code where you want the form in your website html  -->
-  <div class="sib-form" style="text-align: center; background-color: #EFF2F7;">
+
+  <!-- Begin Brevo Newsletter Signup Form -->
+  <section style="text-align:center; background-color: #EFF2F7; padding: 2rem;">
     <div id="sib-form-container" class="sib-form-container">
-      <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center; background-color:rgba(255,255,255,1); max-width:540px; border-radius:3px; border-width:1px; border-color:#C0CCD9; border-style:solid; direction:ltr">
+      <div id="sib-container" class="sib-container--large sib-container--vertical" style="background:#fff; max-width:540px; margin:auto; padding:1rem; border:1px solid #C0CCD9; border-radius:6px;">
         <form id="sib-form" method="POST" action="https://sibforms.com/serve/MUIFAPXFKp6ArdW9gjni_PZ9v526d5zUWhnFtvGy87YPUmwVZ178WaXVNR7IQoIl8VO9tiSFWycg622PZ1ydEHDNhSE5xmbD0Frp8wc4c_tjLrKC2ho2PDKFc4P6dKhhaYBxvYm2YW2QL19eyZ8K-SztdvfpROS2NeTy7jIDrapi91y5VAHQSu8vfG-TE54_86MM-z7qURot_O9K" data-type="subscription">
-          <div style="padding: 8px 0;">
-            <div class="sib-form-block" style="font-size:32px; text-align:left; font-weight:700; font-family:Helvetica, sans-serif; color:#3C4858; background-color:transparent;">
-              <p>Newsletter</p>
-            </div>
-          </div>
-          <div style="padding: 8px 0;">
-            <div class="sib-text-form-block">
-              <p>Subscribe to our newsletter and stay updated.</p>
-            </div>
-          </div>
-          <div style="padding: 8px 0;">
-            <label for="EMAIL">Enter your email address to subscribe</label>
-            <input type="email" id="EMAIL" name="EMAIL" required placeholder="you@example.com" />
-          </div>
-          <div style="padding: 8px 0;">
-            <button type="submit" style="background:#3E4857; color:white; padding:10px 20px; border:none; border-radius:5px;">SUBSCRIBE</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-  <!-- END Brevo Form -->
-  <footer>
-    <p>&copy; 2025 Aloha Healing Center. All rights reserved.</p>
-  </footer>
-  <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
-</body>
-</html>
+          <h3>Subscribe to Our Newsletter</h3>
+          <input type="email" name="EMAIL" id
