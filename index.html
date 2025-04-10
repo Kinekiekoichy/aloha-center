@@ -7,121 +7,27 @@
   <meta name="keywords" content="Energy Enhancement System, healing sessions, wellness center, holistic health, cell regeneration, detox, pain relief" />
   <title>Aloha Healing Center | Energy Enhancement System</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/main.css">
   <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      background: url('https://images.squarespace-cdn.com/content/v1/639b45c2fae8d862d2b7a9cf/e16f8325-ff29-4499-b5e6-96f114e8de4c/IMG_20171024_150339.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #333;
-    }
-    header, footer {
-      background-color: rgba(255, 255, 255, 0.9);
-      text-align: center;
-      padding: 1.5rem;
-    }
-    .navbar {
-      background-color: rgba(255, 255, 255, 0.9);
-      padding: 1rem;
-      text-align: center;
-    }
-    .navbar a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #2e856e;
-      font-weight: 600;
-    }
-    .hero {
-      text-align: center;
-      padding: 6rem 2rem;
-      color: white;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
-    }
-    .hero h1 {
-      font-size: 3rem;
-      margin: 0 0 1rem;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
-    .hero a {
-      background: #2e856e;
-      color: white;
-      padding: 1rem 2rem;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
-    }
-    main {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem;
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    h2 {
-      text-align: center;
-      color: #2e856e;
-    }
-    .benefits {
+    .video-pair {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    .bubble {
-      background: #eef8f3;
-      padding: 1rem;
-      border-radius: 50px;
-      text-align: center;
-      font-weight: bold;
-      width: 180px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.05);
-    }
-    .section {
-      margin-top: 2rem;
-      text-align: center;
-    }
-    .testimonial-preview {
-      background-color: #eef8f3;
-      padding: 2rem;
-      border-radius: 8px;
+      gap: 1.5rem;
       margin-top: 2rem;
     }
-    .newsletter {
-      text-align: center;
-      background-color: #EFF2F7;
-      padding: 2rem;
+    .video-pair iframe {
+      width: 360px;
+      height: 202px;
       border-radius: 10px;
-      margin-top: 3rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    .newsletter input[type="email"] {
-      padding: 0.75rem;
-      width: 70%;
-      max-width: 300px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    .newsletter button {
-      padding: 0.75rem 1.5rem;
-      background-color: #3E4857;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-weight: bold;
-      margin-left: 1rem;
-      cursor: pointer;
-    }
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
+    .login-box {
+      text-align:center;
+      background-color:#eef8f3;
+      padding:2rem;
+      border-radius:10px;
+      margin-top:3rem;
     }
   </style>
 </head>
@@ -131,13 +37,18 @@
   </header>
 
   <nav class="navbar">
-    <a href="/index.html">Home</a>
-    <a href="/eesystem.html">EESystem Info</a>
-    <a href="/session-preparation.html">Preparation</a>
-    <a href="/bookings.html">Bookings</a>
-    <a href="/about.html">About</a>
-    <a href="/contact.html">Contact</a>
-    <a href="/events.html">Events</a>
+    <div class="nav-container">
+      <a href="/index.html" class="nav-logo">Aloha</a>
+      <div class="nav-toggle" onclick="document.body.classList.toggle('nav-open')">☰</div>
+      <div class="nav-links">
+        <a href="/eesystem.html">EESystem Info</a>
+        <a href="/session-preparation.html">Preparation</a>
+        <a href="/bookings.html">Bookings</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/events.html">Events</a>
+      </div>
+    </div>
   </nav>
 
   <div class="hero">
@@ -159,31 +70,39 @@
       <div class="bubble">Mental Clarity</div>
     </div>
 
-    <div class="section">
-      <h2>Why Choose Us?</h2>
-      <p>At Aloha Healing Center, we are dedicated to providing a serene and supportive environment for your healing journey. Our experienced staff is here to guide you every step of the way.</p>
-      <a href="/about.html" style="background: #3E4857; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600;">Learn More</a>
-    </div>
-
-    <div class="section">
+    <section class="section">
       <h2>How It Works</h2>
-      <p>The Energy Enhancement System (EESystem) utilizes a unique combination of frequencies and energy fields to promote healing and wellness. Experience the benefits of this advanced technology in a serene environment.</p>
-      <a href="/eesystem.html" style="background: #3E4857; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600;">Learn More</a>
-    </div>
+      <p>The Energy Enhancement System (EESystem) uses scalar and light fields to promote deep healing and energetic balance throughout the body. It's a technology that bridges science and consciousness.</p>
+    </section>
 
-    <div class="testimonial-preview">
+    <section class="section">
+      <h2>See It In Action</h2>
+      <div class="video-pair">
+        <iframe src="https://www.youtube.com/embed/SE2KquFMNzM" title="The Light System Explained" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/9krozcwQ8Rk" title="EESystem Impact Testimonial" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="testimonial-preview">
       <h2>What Our Clients Say</h2>
       <p>"The EESystem helped me regain my vitality. It's a peaceful and powerful space." – Alex H.</p>
       <a href="/about.html">Read More Testimonials</a>
-    </div>
+    </section>
 
-    <div class="newsletter">
+    <section class="newsletter">
       <h2>Subscribe to Our Newsletter</h2>
       <form action="https://sibforms.com/serve/MUIFAPXFKp6ArdW9gjni_PZ9v526d5zUWhnFtvGy87YPUmwVZ178WaXVNR7IQoIl8VO9tiSFWycg622PZ1ydEHDNhSE5xmbD0Frp8wc4c_tjLrKC2ho2PDKFc4P6dKhhaYBxvYm2YW2QL19eyZ8K-SztdvfpROS2NeTy7jIDrapi91y5VAHQSu8vfG-TE54_86MM-z7qURot_O9K" method="POST" target="_blank">
         <input type="email" name="EMAIL" placeholder="Your email address" required />
         <button type="submit">Subscribe</button>
       </form>
-    </div>
+    </section>
+
+    <section class="login-box">
+      <h2>Client Login Portal</h2>
+      <p>Already have an account? Access your dashboard to manage bookings and preferences.</p>
+      <a href="/portal.html">Login to Portal</a>
+    </section>
+
   </main>
 
   <footer>
