@@ -93,6 +93,22 @@
   </style>
 </head>
 <body>
+  <div id="header-placeholder"></div>
+
+<script>
+  fetch("/header.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("header-placeholder").innerHTML = html;
+    });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-container')) {
+      document.body.classList.remove('nav-open');
+    }
+  });
+</script>
+
   <header>
     <h1>Preparing for Your Session</h1>
   </header>
@@ -151,5 +167,12 @@
       }
     });
   </script>
+<script>
+  fetch("/footer.html")
+    .then(res => res.text())
+    .then(html => {
+      document.body.insertAdjacentHTML("beforeend", html);
+    });
+</script>
 </body>
 </html>

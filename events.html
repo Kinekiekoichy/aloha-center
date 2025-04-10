@@ -69,6 +69,22 @@
   </style>
 </head>
 <body>
+  <div id="header-placeholder"></div>
+
+<script>
+  fetch("/header.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("header-placeholder").innerHTML = html;
+    });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-container')) {
+      document.body.classList.remove('nav-open');
+    }
+  });
+</script>
+
   <header>
     <h1>Contact Aloha Healing Center</h1>
   </header>
@@ -113,5 +129,12 @@
   <footer>
     <p>&copy; 2025 Aloha Healing Center</p>
   </footer>
-</body>
+  <script>
+    fetch("/footer.html")
+      .then(res => res.text())
+      .then(html => {
+        document.body.insertAdjacentHTML("beforeend", html);
+      });
+  </script>
+  </body>
 </html>
