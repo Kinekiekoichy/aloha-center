@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Book your Energy Enhancement System session. View session options, pricing, packages, and available discounts." />
-  <title>Bookings & Packages | Aloha Healing Center</title>
+  <meta name="description" content="Book your Energy Enhancement System session at Aloha Healing Center. View available times, pricing, and package discounts." />
+  <title>Book a Session | Aloha Healing Center</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -18,116 +18,176 @@
       text-align: center;
       padding: 1.5rem;
     }
-    nav {
+    .navbar {
+      position: sticky;
+      top: 0;
       background-color: #cdeae2;
-      padding: 1rem;
-      text-align: center;
+      z-index: 1000;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
     }
-    nav a {
-      margin: 0 1rem;
+    .nav-container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .nav-logo {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #2e856e;
+      text-decoration: none;
+    }
+    .nav-toggle {
+      font-size: 1.8rem;
+      cursor: pointer;
+      display: none;
+      color: #2e856e;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .nav-links a {
       text-decoration: none;
       color: #2e856e;
       font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    .nav-links a:hover {
+      color: #145f4a;
+    }
+    @media (max-width: 768px) {
+      .nav-toggle {
+        display: block;
+      }
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background-color: #cdeae2;
+        padding: 1rem 0;
+      }
+      body.nav-open .nav-links {
+        display: flex;
+      }
+      .nav-links a {
+        padding: 0.5rem 1rem;
+        text-align: center;
+      }
     }
     main {
-      max-width: 900px;
-      margin: 0 auto;
+      max-width: 1000px;
+      margin: auto;
       padding: 2rem;
-    }
-    section {
-      margin-bottom: 2rem;
     }
     h2 {
       color: #2e856e;
+      text-align: center;
+      margin-bottom: 2rem;
     }
-    .package, .session, .discount {
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 1rem;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .card h3 {
+      color: #2e856e;
+    }
+    .card p {
+      margin: 1rem 0;
+    }
+    .card strong {
+      display: block;
+      font-size: 1.2rem;
       margin-bottom: 1rem;
-      background-color: #fff;
     }
-    a.book-now {
-      display: inline-block;
-      margin-top: 1rem;
+    .card a {
+      background: #2e856e;
+      color: white;
       padding: 0.75rem 1.5rem;
-      background-color: #2e856e;
-      color: #fff;
+      border-radius: 6px;
       text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
+      font-weight: 600;
+      display: inline-block;
+    }
+    .card a:hover {
+      background-color: #1c5f4f;
     }
   </style>
 </head>
 <body>
-  <div id="header-placeholder"></div>
-
-<script>
-  fetch("/header.html")
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById("header-placeholder").innerHTML = html;
-    });
-
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.nav-container')) {
-      document.body.classList.remove('nav-open');
-    }
-  });
-</script>
-
   <header>
-    <h1>Bookings & Packages</h1>
+    <h1>Book Your Healing Session</h1>
   </header>
-  <nav>
-    <a href="/index.html">Home</a>
-    <a href="/eesystem.html">EESystem Info</a>
-    <a href="/session-preparation.html">Preparation</a>
-    <a href="/bookings.html">Bookings</a>
-    <a href="/about.html">About</a>
-    <a href="/contact.html">Contact</a>
-    <a href="/events.html">Events</a>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/index.html" class="nav-logo">Aloha</a>
+      <div class="nav-toggle" onclick="document.body.classList.toggle('nav-open')">☰</div>
+      <div class="nav-links">
+        <a href="/index.html">Home</a>
+        <a href="/eesystem.html">EESystem Info</a>
+        <a href="/session-preparation.html">Preparation</a>
+        <a href="/bookings.html">Bookings</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/events.html">Events</a>
+      </div>
+    </div>
   </nav>
   <main>
-    <section>
-      <h2>Session Options</h2>
-      <div class="session">
+    <h2>Session Options & Packages</h2>
+    <div class="grid">
+      <div class="card">
         <h3>1-Hour Session</h3>
-        <p>$35 per session. Great for a quick refresh.</p>
+        <strong>$40</strong>
+        <p>Ideal for a quick recharge and energetic reset.</p>
+        <a href="https://calendly.com/admin-aloha-center/1hr">Book Now</a>
       </div>
-      <div class="session">
+      <div class="card">
         <h3>2-Hour Session</h3>
-        <p>$60 per session. Our most popular healing window.</p>
+        <strong>$60</strong>
+        <p>Recommended for deeper healing and full-body integration.</p>
+        <a href="https://calendly.com/admin-aloha-center/2hr">Book Now</a>
       </div>
-      <div class="session">
+      <div class="card">
         <h3>Overnight Session</h3>
-        <p>$150. Ideal for deep detox and cellular repair.</p>
+        <strong>$150</strong>
+        <p>Experience extended energetic immersion with overnight access.</p>
+        <a href="https://calendly.com/admin-aloha-center/overnight">Book Now</a>
       </div>
-      <a class="book-now" href="https://calendly.com/yourlink" target="_blank">Book a Session Now</a>
-    </section>
-    <section>
-      <h2>Discounts</h2>
-      <div class="discount">
-        <p><strong>First-Time Clients:</strong> 15% off any session</p>
+      <div class="card">
+        <h3>Intro Package (3 x 2hr)</h3>
+        <strong>$150</strong>
+        <p>Perfect for new clients to explore the system’s full benefits.</p>
+        <a href="https://calendly.com/admin-aloha-center/package">Book Now</a>
       </div>
-      <div class="discount">
-        <p><strong>Veterans & Seniors:</strong> 10% off all sessions</p>
-      </div>
-    </section>
-    <section>
-      <h2>Packages</h2>
-      <div class="package">
-        <h3>5-Session Package</h3>
-        <p>$270 (save $30). Valid for 2-hour sessions.</p>
-      </div>
-      <div class="package">
-        <h3>10-Session Package</h3>
-        <p>$500 (save $100). Valid for 2-hour sessions.</p>
-      </div>
-    </section>
+    </div>
+
+    <h2 style="margin-top: 3rem;">Discounts Available</h2>
+    <p style="text-align:center; max-width: 600px; margin: 0 auto;">
+      We proudly offer discounts to veterans, seniors, and first-time visitors. Inquire at your visit or email us to learn more.
+    </p>
   </main>
   <footer>
-    <p>&copy; 2025 Aloha Healing Center</p>
+    <p>&copy; 2025 Aloha Healing Center. All rights reserved.</p>
   </footer>
+  <script>
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.nav-container')) {
+        document.body.classList.remove('nav-open');
+      }
+    });
+  </script>
 </body>
 </html>
