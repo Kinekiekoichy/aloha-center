@@ -1,145 +1,116 @@
+<!-- Bookings Page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Book your Energy Enhancement System session at Aloha Healing Center. View available times, pricing, and package discounts." />
-  <title>Book a Session | Aloha Healing Center</title>
+  <meta name="description" content="Book your session with Aloha Healing Center. Explore session durations, packages, and available discounts." />
+  <title>Bookings | Aloha Healing Center</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles/main.css">
   <style>
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: url('https://images.squarespace-cdn.com/content/v1/639b45c2fae8d862d2b7a9cf/e16f8325-ff29-4499-b5e6-96f114e8de4c/IMG_20171024_150339.jpg') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+      color: #fff;
     }
-    .service-card {
-      background: #fff;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+    }
+    .nav-links a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    .nav-links a:hover {
+      color: #00ffc3;
+    }
+    .section {
+      padding: 3rem 2rem;
+      max-width: 960px;
+      margin: auto;
       text-align: center;
     }
-    .service-card h3 {
-      color: #2e856e;
-      margin-bottom: 0.5rem;
-    }
-    .service-card p {
+    .section h2 {
+      font-size: 2rem;
       margin-bottom: 1rem;
     }
-    .service-card strong {
-      display: block;
-      margin: 0.5rem 0 1rem;
-      font-size: 1.2rem;
+    .section p {
+      font-size: 1.05rem;
+      line-height: 1.6;
     }
-    .service-card a {
-      background: #2e856e;
-      color: white;
-      padding: 0.6rem 1.2rem;
+    .button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      margin-top: 1rem;
+      background-color: #00ffc3;
+      color: #000;
       text-decoration: none;
       border-radius: 6px;
       font-weight: 600;
     }
-    .login-box {
-      background-color: #eef8f3;
+    .footer {
       text-align: center;
-      margin-top: 2rem;
       padding: 2rem;
-      border-radius: 10px;
-    }
-    .login-box h2 {
-      margin-bottom: 1rem;
-      color: #2e856e;
-    }
-    .login-box a {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      background: #2e856e;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
+      background-color: rgba(0,0,0,0.6);
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Book Your Healing Session</h1>
-  </header>
   <nav class="navbar">
-  <div class="nav-container">
     <a href="/index.html" class="nav-logo">Aloha</a>
-    <div class="nav-toggle" onclick="document.body.classList.toggle('nav-open')">☰</div>
     <div class="nav-links">
-      <a href="/index.html">Home</a>
-      <a href="/eesystem.html">EESystem Info</a>
+      <a href="/eesystem.html">EESystem</a>
       <a href="/session-preparation.html">Preparation</a>
       <a href="/bookings.html">Bookings</a>
       <a href="/about.html">About</a>
       <a href="/contact.html">Contact</a>
       <a href="/events.html">Events</a>
     </div>
-  </div>
-</nav>
+  </nav>
+
   <main>
-    <section>
-      <h2>Session Options</h2>
-      <div class="services">
-        <div class="service-card">
-          <h3>1-Hour Session</h3>
-          <strong>$40</strong>
-          <p>Quick recharge and energetic reset.</p>
-          <a href="https://calendly.com/admin-aloha-center/1hr">Book Now</a>
-        </div>
-        <div class="service-card">
-          <h3>2-Hour Session</h3>
-          <strong>$60</strong>
-          <p>Deep healing and integration.</p>
-          <a href="https://calendly.com/admin-aloha-center/2hr">Book Now</a>
-        </div>
-        <div class="service-card">
-          <h3>Overnight Session</h3>
-          <strong>$150</strong>
-          <p>Extended energetic immersion overnight.</p>
-          <a href="https://calendly.com/admin-aloha-center/overnight">Book Now</a>
-        </div>
-        <div class="service-card">
-          <h3>Intro Package (3 x 2hr)</h3>
-          <strong>$150</strong>
-          <p>Best value for new clients seeking deeper wellness.</p>
-          <a href="https://calendly.com/admin-aloha-center/package">Book Now</a>
-        </div>
-      </div>
+    <section class="section">
+      <h2>Book Your Session</h2>
+      <p>Choose from a range of session durations and healing experiences. We offer single sessions, overnight stays, and package deals. Discounts are available for first-time visitors, veterans, and seniors.</p>
+      <a href="https://calendly.com/admin-aloha-center/" target="_blank" class="button">Book via Calendly</a>
     </section>
 
-    <section class="login-box">
-      <h2>Manage Your Bookings</h2>
-      <p>Already booked a session? Sign in to access your portal and manage your appointments.</p>
-      <a href="/portal.html">Login to Portal</a>
+    <section class="section">
+      <h2>Manage Your Booking</h2>
+      <p>Already have a session? Login to our client portal to view, manage, or reschedule your appointment.</p>
+      <a href="/portal.html" class="button">Client Login</a>
     </section>
+  </main>
 
-    <section style="text-align: center; margin-top: 3rem;">
-      <h2>Discounts Available</h2>
-      <p>We offer discounts to veterans, seniors, and first-time visitors. Please ask during your visit or contact us for details.</p>
-    </section>
-    <section class="login-box" style="text-align:center; background-color:#eef8f3; padding:2rem; border-radius:10px; margin-top:3rem;">
-    <h2>Client Login Portal</h2>
-    <p>Already have an account? Access your dashboard to manage bookings and preferences.</p>
-    <a href="/portal.html" style="display:inline-block; margin-top:1rem; padding:0.75rem 1.5rem; background:#2e856e; color:white; text-decoration:none; border-radius:6px; font-weight:600;">Login to Portal</a>
-  </section>
-
-</main>
-  <footer>
+  <footer class="footer">
     <p>&copy; 2025 Aloha Healing Center. All rights reserved.</p>
   </footer>
-  <script>
-    document.addEventListener('click', (e) => {
-      if (!e.target.closest('.nav-container')) {
-        document.body.classList.remove('nav-open');
-      }
-    });
-  </script>
 </body>
 </html>
 
+<!-- Contact, Events, and Portal pages are next. Say “continue” to get the next full file. -->

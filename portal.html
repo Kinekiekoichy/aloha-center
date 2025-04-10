@@ -1,115 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Login to the Aloha Healing Center portal to manage your bookings and account." />
-  <title>Customer Portal | Aloha Healing Center</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Client Portal | Aloha Healing Center</title>
+  <meta name="description" content="Log in to your Aloha Healing Center account to manage your bookings and profile." />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Open Sans', sans-serif;
-      background: linear-gradient(135deg, #e3fcec, #f9fdfc);
-      color: #333;
+      background: url('https://images.squarespace-cdn.com/content/v1/639b45c2fae8d862d2b7a9cf/e16f8325-ff29-4499-b5e6-96f114e8de4c/IMG_20171024_150339.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
     }
-    header, footer {
-      background-color: #d0f0e0;
-      padding: 1.5rem;
-      text-align: center;
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0,0,0,0.6);
+      z-index: -1;
     }
     .navbar {
-      background-color: #cdeae2;
-      padding: 1rem;
-      text-align: center;
-      box-shadow: 0 1px 5px rgba(0,0,0,0.05);
-    }
-    .navbar a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #2e856e;
-      font-weight: 600;
-    }
-    main {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      flex-direction: column;
-      min-height: 80vh;
-      padding: 2rem;
+      padding: 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-    .portal-box {
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+    }
+    .nav-links a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+    }
+    .container {
       max-width: 400px;
-      width: 100%;
+      margin: 5rem auto;
+      background-color: rgba(255,255,255,0.1);
+      padding: 2rem;
+      border-radius: 10px;
       text-align: center;
     }
-    .portal-box h2 {
-      color: #2e856e;
-      margin-bottom: 1rem;
-    }
-    input[type="email"],
-    input[type="password"] {
+    input {
       width: 100%;
       padding: 0.75rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
+      margin: 0.5rem 0;
+      border: none;
+      border-radius: 5px;
     }
     button {
-      background-color: #2e856e;
-      color: white;
-      padding: 0.75rem 1.5rem;
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #00ffc3;
+      color: #000;
       border: none;
-      border-radius: 6px;
+      border-radius: 5px;
       font-weight: 600;
       cursor: pointer;
-      width: 100%;
     }
-    button:hover {
-      background-color: #1c5f4f;
-    }
-    .portal-footer {
-      margin-top: 1rem;
-      font-size: 0.9rem;
-    }
-    .portal-footer a {
-      color: #2e856e;
-      text-decoration: none;
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: rgba(0,0,0,0.6);
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Aloha Healing Center Portal</h1>
-  </header>
-
   <nav class="navbar">
-    <a href="/index.html">Home</a>
-    <a href="/bookings.html">Bookings</a>
-    <a href="/about.html">About</a>
-    <a href="/contact.html">Contact</a>
+    <a href="/index.html" class="nav-logo">Aloha</a>
+    <div class="nav-links">
+      <a href="/eesystem.html">EESystem</a>
+      <a href="/session-preparation.html">Preparation</a>
+      <a href="/bookings.html">Bookings</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/events.html">Events</a>
+    </div>
   </nav>
 
-  <main>
-    <div class="portal-box">
-      <h2>Login to Your Account</h2>
-      <form id="loginForm">
-        <input type="email" id="email" placeholder="Email" required />
-        <input type="password" id="password" placeholder="Password" required />
-        <button type="submit">Log In</button>
-      </form>
-      <div class="portal-footer">
-        <p><a href="#">Forgot password?</a> | <a href="#">Create an account</a></p>
-      </div>
-    </div>
-  </main>
+  <div class="container">
+    <h2>Client Login</h2>
+    <form id="login-form">
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="password" name="password" placeholder="Password" required />
+      <button type="submit">Log In</button>
+    </form>
+    <p><a href="/reset-password.html" style="color:#00ffc3;">Forgot password?</a></p>
+    <p>Don’t have an account? <a href="/signup.html" style="color:#00ffc3;">Create one</a></p>
+  </div>
 
-  <footer>
+  <footer class="footer">
     <p>&copy; 2025 Aloha Healing Center. All rights reserved.</p>
   </footer>
+
+  <script type="module" src="/scripts/auth.js"></script>
 </body>
 </html>

@@ -1,151 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dashboard | Aloha Healing Center</title>
+  <meta name="description" content="Manage your appointments and profile at Aloha Healing Center." />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Open Sans', sans-serif;
-      background: #f0f9f6;
-      color: #333;
+      background: #121212;
+      color: #fff;
     }
-    header {
-      background-color: #2e856e;
-      color: white;
-      padding: 1.5rem;
-      text-align: center;
-    }
-    nav {
-      background-color: #fff;
+    .navbar {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       padding: 1rem 2rem;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      background-color: #1e1e1e;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-    nav .logo {
+    .nav-logo {
+      font-size: 1.5rem;
       font-weight: 700;
-      color: #2e856e;
+      color: #fff;
       text-decoration: none;
     }
-    nav button {
-      background: #e34f4f;
-      color: white;
+    .nav-links a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #ccc;
+      font-weight: 500;
+    }
+    .nav-links a:hover {
+      color: #00ffc3;
+    }
+    .dashboard {
+      max-width: 960px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background-color: #1f1f1f;
+      border-radius: 10px;
+    }
+    .dashboard h2 {
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+    }
+    .appointment {
+      background: #292929;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    .appointment p {
+      margin: 0.25rem 0;
+    }
+    .logout-btn {
+      background-color: #ff4d4d;
+      color: #fff;
+      padding: 0.6rem 1.2rem;
       border: none;
-      padding: 0.5rem 1rem;
+      border-radius: 5px;
       font-weight: 600;
-      border-radius: 6px;
       cursor: pointer;
-    }
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem;
-    }
-    .welcome {
-      background-color: white;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      text-align: center;
-    }
-    .welcome h2 {
-      color: #2e856e;
-    }
-    .grid {
       margin-top: 2rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
     }
-    .card {
-      background: #fff;
-      border-radius: 10px;
-      padding: 1.5rem;
-      box-shadow: 0 0 8px rgba(0,0,0,0.05);
-    }
-    .card h3 {
-      color: #2e856e;
-      margin-top: 0;
-    }
-    .card p {
-      margin: 0.5rem 0 1rem;
-    }
-    .card a {
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      background-color: #2e856e;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
+    @media (max-width: 600px) {
+      .dashboard {
+        margin: 1rem;
+        padding: 1rem;
+      }
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav-links {
+        margin-top: 0.5rem;
+        display: flex;
+        flex-wrap: wrap;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Aloha Healing Center Portal</h1>
-  </header>
-
-  <nav>
-    <a href="/index.html" class="logo">Aloha</a>
-    <button onclick="logoutUser()">Log Out</button>
+  <nav class="navbar">
+    <a href="/index.html" class="nav-logo">Aloha</a>
+    <div class="nav-links">
+      <a href="/bookings.html">Book</a>
+      <a href="/portal.html">Portal</a>
+      <a href="#" onclick="logout()">Logout</a>
+    </div>
   </nav>
 
-  <div class="container">
-    <div class="welcome">
-      <h2>Welcome, <span id="userEmail">User</span></h2>
-      <p>Manage your bookings, view upcoming sessions, and stay connected with Aloha Healing Center.</p>
+  <main class="dashboard">
+    <h2 id="welcome-user">Welcome!</h2>
+    <div id="appointments">
+      <p>Loading your appointments...</p>
     </div>
-
-    <div class="grid">
-      <div class="card">
-        <h3>📅 My Appointments</h3>
-        <p>View and manage your upcoming EESystem sessions.</p>
-        <a href="https://calendly.com/admin-aloha-center">View Bookings</a>
-      </div>
-      <div class="card">
-        <h3>💌 Newsletter</h3>
-        <p>Make sure you’re signed up to receive our latest updates and offers.</p>
-        <a href="/index.html#newsletter">Subscribe</a>
-      </div>
-      <div class="card">
-        <h3>📖 Session Preparation</h3>
-        <p>Tips to get the most out of your experience before, during, and after.</p>
-        <a href="/session-preparation.html">Read Tips</a>
-      </div>
-      <div class="card">
-        <h3>📍 Center Info</h3>
-        <p>Find our address, hours, and contact details.</p>
-        <a href="/contact.html">Contact Us</a>
-      </div>
-    </div>
-  </div>
+    <button class="logout-btn" onclick="logout()">Log Out</button>
+  </main>
 
   <script type="module">
-    import { auth, signOut, onAuthStateChanged } from './scripts/firebase-config.js';
+    import { auth } from "/scripts/firebase-config.js";
+    import {
+      onAuthStateChanged,
+      signOut
+    } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+    import {
+      getFirestore,
+      collection,
+      query,
+      where,
+      getDocs
+    } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
-    const userEmailDisplay = document.getElementById("userEmail");
+    const db = getFirestore();
 
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        userEmailDisplay.textContent = user.email;
-      } else {
+    const welcomeEl = document.getElementById("welcome-user");
+    const apptContainer = document.getElementById("appointments");
+
+    onAuthStateChanged(auth, async (user) => {
+      if (!user) {
         window.location.href = "/portal.html";
+      } else {
+        welcomeEl.textContent = `Welcome, ${user.email}`;
+
+        try {
+          const apptRef = collection(db, "appointments");
+          const q = query(apptRef, where("userId", "==", user.uid));
+          const querySnapshot = await getDocs(q);
+
+          if (querySnapshot.empty) {
+            apptContainer.innerHTML = "<p>No appointments yet.</p>";
+          } else {
+            apptContainer.innerHTML = "";
+            querySnapshot.forEach(doc => {
+              const appt = doc.data();
+              const el = document.createElement("div");
+              el.className = "appointment";
+              el.innerHTML = `
+                <p><strong>Date:</strong> ${appt.date}</p>
+                <p><strong>Time:</strong> ${appt.time}</p>
+                <p><strong>Status:</strong> ${appt.status}</p>
+              `;
+              apptContainer.appendChild(el);
+            });
+          }
+        } catch (err) {
+          apptContainer.innerHTML = "<p>Error loading appointments.</p>";
+          console.error(err);
+        }
       }
     });
 
-    window.logoutUser = () => {
-      signOut(auth)
-        .then(() => {
-          window.location.href = "/portal.html";
-        })
-        .catch((error) => {
-          alert("Error signing out: " + error.message);
-        });
-    }
+    window.logout = async function () {
+      try {
+        await signOut(auth);
+        window.location.href = "/portal.html";
+      } catch (error) {
+        alert("Logout failed: " + error.message);
+      }
+    };
   </script>
 </body>
 </html>

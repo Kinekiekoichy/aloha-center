@@ -2,111 +2,159 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Discover the transformative benefits of the Energy Enhancement System at Aloha. Book your session today and embark on a journey to wellness." />
-  <meta name="keywords" content="Energy Enhancement System, healing sessions, wellness center, holistic health, cell regeneration, detox, pain relief" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Aloha Healing Center | Energy Enhancement System</title>
+  <meta name="description" content="Discover the transformative benefits of the Energy Enhancement System at Aloha. Book your session today and embark on a journey to wellness.">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles/main.css">
   <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: url('https://images.squarespace-cdn.com/content/v1/639b45c2fae8d862d2b7a9cf/e16f8325-ff29-4499-b5e6-96f114e8de4c/IMG_20171024_150339.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0,0,0,0.6);
+      z-index: -1;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+    }
+    .nav-links a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+    }
+    .nav-links a:hover {
+      color: #00ffc3;
+    }
+    .hero {
+      text-align: center;
+      padding: 6rem 2rem 4rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .hero a {
+      background: #00ffc3;
+      color: #000;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+    .section {
+      padding: 3rem 2rem;
+      max-width: 960px;
+      margin: auto;
+      text-align: center;
+    }
+    .benefits {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .bubble {
+      background-color: rgba(255,255,255,0.1);
+      padding: 1rem 1.5rem;
+      border-radius: 30px;
+      font-weight: 600;
+    }
     .video-pair {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 1.5rem;
-      margin-top: 2rem;
+      gap: 1rem;
     }
-    .video-pair iframe {
+    iframe {
+      border-radius: 10px;
       width: 360px;
       height: 202px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    .login-box {
-      text-align:center;
-      background-color:#eef8f3;
-      padding:2rem;
-      border-radius:10px;
-      margin-top:3rem;
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: rgba(0,0,0,0.6);
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Aloha Healing Center</h1>
-  </header>
 
   <nav class="navbar">
-    <div class="nav-container">
-      <a href="/index.html" class="nav-logo">Aloha</a>
-      <div class="nav-toggle" onclick="document.body.classList.toggle('nav-open')">☰</div>
-      <div class="nav-links">
-        <a href="/eesystem.html">EESystem Info</a>
-        <a href="/session-preparation.html">Preparation</a>
-        <a href="/bookings.html">Bookings</a>
-        <a href="/about.html">About</a>
-        <a href="/contact.html">Contact</a>
-        <a href="/events.html">Events</a>
-      </div>
+    <a href="/index.html" class="nav-logo">Aloha</a>
+    <div class="nav-links">
+      <a href="/eesystem.html">EESystem</a>
+      <a href="/session-preparation.html">Preparation</a>
+      <a href="/bookings.html">Bookings</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/events.html">Events</a>
+      <a href="/portal.html">Login</a>
     </div>
   </nav>
 
-  <div class="hero">
+  <section class="hero">
     <h1>Energy Enhancement System</h1>
     <p>Relax. Recharge. Regenerate. Discover the future of holistic healing.</p>
     <a href="https://calendly.com/admin-aloha-center/" target="_blank">Book a Session</a>
-  </div>
+  </section>
 
-  <main>
+  <section class="section">
     <h2>Key Benefits</h2>
     <div class="benefits">
       <div class="bubble">Cell Regeneration</div>
       <div class="bubble">Immune Support</div>
       <div class="bubble">Pain Relief</div>
-      <div class="bubble">Inflammation Reduction</div>
-      <div class="bubble">Deep Detoxification</div>
+      <div class="bubble">Detoxification</div>
       <div class="bubble">Mood Elevation</div>
-      <div class="bubble">Increased Energy</div>
       <div class="bubble">Mental Clarity</div>
+      <div class="bubble">Increased Energy</div>
+      <div class="bubble">Inflammation Reduction</div>
     </div>
+  </section>
 
-    <section class="section">
-      <h2>How It Works</h2>
-      <p>The Energy Enhancement System (EESystem) uses scalar and light fields to promote deep healing and energetic balance throughout the body. It's a technology that bridges science and consciousness.</p>
-    </section>
+  <section class="section">
+    <h2>See the Experience</h2>
+    <div class="video-pair">
+      <iframe src="https://www.youtube.com/embed/SE2KquFMNzM" title="The Light System"></iframe>
+      <iframe src="https://www.youtube.com/embed/9krozcwQ8Rk" title="EESystem Testimonials"></iframe>
+    </div>
+  </section>
 
-    <section class="section">
-      <h2>See It In Action</h2>
-      <div class="video-pair">
-        <iframe src="https://www.youtube.com/embed/SE2KquFMNzM" title="The Light System Explained" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/9krozcwQ8Rk" title="EESystem Impact Testimonial" allowfullscreen></iframe>
-      </div>
-    </section>
+  <section class="section">
+    <h2>Already Booked?</h2>
+    <p>Create an account or log in to manage your sessions anytime.</p>
+    <a href="/signup.html" class="hero-link" style="background-color:#fff;color:#000;text-decoration:none;padding:0.75rem 1.5rem;border-radius:6px;font-weight:600;">Sign Up</a>
+  </section>
 
-    <section class="testimonial-preview">
-      <h2>What Our Clients Say</h2>
-      <p>"The EESystem helped me regain my vitality. It's a peaceful and powerful space." – Alex H.</p>
-      <a href="/about.html">Read More Testimonials</a>
-    </section>
-
-    <section class="newsletter">
-      <h2>Subscribe to Our Newsletter</h2>
-      <form action="https://sibforms.com/serve/MUIFAPXFKp6ArdW9gjni_PZ9v526d5zUWhnFtvGy87YPUmwVZ178WaXVNR7IQoIl8VO9tiSFWycg622PZ1ydEHDNhSE5xmbD0Frp8wc4c_tjLrKC2ho2PDKFc4P6dKhhaYBxvYm2YW2QL19eyZ8K-SztdvfpROS2NeTy7jIDrapi91y5VAHQSu8vfG-TE54_86MM-z7qURot_O9K" method="POST" target="_blank">
-        <input type="email" name="EMAIL" placeholder="Your email address" required />
-        <button type="submit">Subscribe</button>
-      </form>
-    </section>
-
-    <section class="login-box">
-      <h2>Client Login Portal</h2>
-      <p>Already have an account? Access your dashboard to manage bookings and preferences.</p>
-      <a href="/portal.html">Login to Portal</a>
-    </section>
-
-  </main>
-
-  <footer>
+  <footer class="footer">
     <p>&copy; 2025 Aloha Healing Center. All rights reserved.</p>
   </footer>
+
 </body>
 </html>

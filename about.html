@@ -3,56 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learn more about the mission, vision, team, and energy healing technology behind Aloha Healing Center." />
+  <meta name="description" content="Learn more about our mission, team, and the healing philosophy behind Aloha Healing Center and the Energy Enhancement System." />
   <title>About Us | Aloha Healing Center</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles/main.css">
   <style>
-    .team {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: url('https://images.squarespace-cdn.com/content/v1/639b45c2fae8d862d2b7a9cf/e16f8325-ff29-4499-b5e6-96f114e8de4c/IMG_20171024_150339.jpg') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+      color: #fff;
     }
-    .member {
-      background: #fff;
-      padding: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      text-align: center;
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: -1;
     }
-    .member img {
-      width: 100%;
-      height: auto;
-      border-radius: 50%;
-      margin-bottom: 0.5rem;
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-    .credit-section {
-      margin-top: 3rem;
-      padding: 2rem;
-      background-color: #f0f9f6;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
     }
-    .credit-section p {
-      max-width: 700px;
+    .nav-links a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    .nav-links a:hover {
+      color: #00ffc3;
+    }
+    .section {
+      padding: 3rem 2rem;
+      max-width: 960px;
       margin: auto;
-      line-height: 1.7;
-      font-size: 1.05rem;
       text-align: center;
     }
-    .credit-section a {
-      color: #2e856e;
-      font-weight: 600;
-      text-decoration: underline;
-    }
-    .testimonial-section {
-      margin-top: 2rem;
-      text-align: center;
-    }
-    .testimonial-section p {
-      font-style: italic;
+    .section h2 {
+      font-size: 2rem;
       margin-bottom: 1rem;
+    }
+    .section p {
+      font-size: 1.05rem;
+      line-height: 1.6;
     }
     .video-pair {
       display: flex;
@@ -67,71 +75,50 @@
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: rgba(0,0,0,0.6);
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>About Aloha Healing Center</h1>
-  </header>
-
   <nav class="navbar">
-    <div class="nav-container">
-      <a href="/index.html" class="nav-logo">Aloha</a>
-      <div class="nav-toggle" onclick="document.body.classList.toggle('nav-open')">☰</div>
-      <div class="nav-links">
-        <a href="/index.html">Home</a>
-        <a href="/eesystem.html">EESystem Info</a>
-        <a href="/session-preparation.html">Preparation</a>
-        <a href="/bookings.html">Bookings</a>
-        <a href="/about.html">About</a>
-        <a href="/contact.html">Contact</a>
-        <a href="/events.html">Events</a>
-      </div>
+    <a href="/index.html" class="nav-logo">Aloha</a>
+    <div class="nav-links">
+      <a href="/eesystem.html">EESystem</a>
+      <a href="/session-preparation.html">Preparation</a>
+      <a href="/bookings.html">Bookings</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/events.html">Events</a>
     </div>
   </nav>
 
   <main>
-    <section>
+    <section class="section">
       <h2>Our Story</h2>
-      <p>Aloha Healing Center was founded with the vision of making advanced healing technologies accessible to everyone. Our mission is to provide a sacred, welcoming space where people can experience profound physical, emotional, and spiritual transformation through the Energy Enhancement System.</p>
+      <p>Aloha Healing Center was founded with the mission to bring transformational wellness experiences to our community. Our focus is to elevate healing through the Energy Enhancement System, combining the power of quantum technology with heart-centered care.</p>
     </section>
 
-    <section>
-      <h2>Meet the Team</h2>
-      <div class="team">
-        <div class="member">
-          <img src="/images/staff1.jpg" alt="Staff Member 1">
-          <h3>Robert Swanson-Neitzel</h3>
-          <p>Founder & Director</p>
-        </div>
-        <div class="member">
-          <img src="/images/staff2.jpg" alt="Staff Member 2">
-          <h3>Jane Heartstone</h3>
-          <p>Wellness Guide</p>
-        </div>
-        <div class="member">
-          <img src="/images/staff3.jpg" alt="Staff Member 3">
-          <h3>Michael Lumiere</h3>
-          <p>Energy Practitioner</p>
-        </div>
-      </div>
+    <section class="section">
+      <h2>Meet Our Team</h2>
+      <p>Our dedicated team is here to guide you every step of the way on your healing journey. Each practitioner is trained in energy alignment and committed to your growth and wellbeing.</p>
     </section>
 
-    <section class="credit-section">
+    <section class="section">
       <h2>Inspired by Visionaries</h2>
-      <p>
-        We are proud to carry forward the pioneering work of <a href="https://www.thelightsystem.com" target="_blank">The Light System</a> and the brilliant energy of Dr. Sandra Rose Michael. Her creation of the EESystem has helped millions reclaim their health and vitality. Our center is honored to make this incredible healing available to the Maui community and beyond.
-      </p>
+      <p>We proudly honor the work of <a href="https://www.thelightsystem.com" style="color: #00ffc3; text-decoration: underline;" target="_blank">The Light System</a> and the pioneering spirit of Dr. Sandra Rose Michael. Her life-changing development of the EESystem continues to elevate lives around the world.</p>
     </section>
 
-    <section class="testimonial-section">
+    <section class="section">
       <h2>What Our Clients Say</h2>
       <p>“The sessions here have completely shifted my energy. I feel more grounded, alive, and in flow.” – Sarah M.</p>
       <p>“It’s like nothing I’ve ever experienced. I now bring my whole family.” – Jason K.</p>
     </section>
 
     <section class="section">
-      <h2>More About Our Mission</h2>
+      <h2>Watch Our Mission</h2>
       <div class="video-pair">
         <iframe src="https://www.youtube.com/embed/9iRO2iDRaOE" title="The Light System Purpose" allowfullscreen></iframe>
         <iframe src="https://www.youtube.com/embed/cCikCmXZ_a4" title="Jason Shurka on The Light System" allowfullscreen></iframe>
@@ -139,16 +126,8 @@
     </section>
   </main>
 
-  <footer>
+  <footer class="footer">
     <p>&copy; 2025 Aloha Healing Center. All rights reserved.</p>
   </footer>
-
-  <script>
-    document.addEventListener('click', (e) => {
-      if (!e.target.closest('.nav-container')) {
-        document.body.classList.remove('nav-open');
-      }
-    });
-  </script>
 </body>
 </html>

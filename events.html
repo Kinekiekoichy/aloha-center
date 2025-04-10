@@ -1,180 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Check out upcoming events at Aloha Healing Center. Our grand opening is coming soon—stay informed!" />
-  <title>Events | Aloha Healing Center</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Client Portal | Aloha Healing Center</title>
+  <meta name="description" content="Log in to your Aloha Healing Center account to manage your bookings and profile." />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Open Sans', sans-serif;
       margin: 0;
-      background-color: #f9fdfc;
-      color: #333;
+      font-family: 'Open Sans', sans-serif;
+      background: url('https://images.squarespace-cdn.com/content/v1/639b45c2fae8d862d2b7a9cf/e16f8325-ff29-4499-b5e6-96f114e8de4c/IMG_20171024_150339.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
     }
-    header, footer {
-      background-color: #d0f0e0;
-      text-align: center;
-      padding: 1.5rem;
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0,0,0,0.6);
+      z-index: -1;
     }
     .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.6);
       position: sticky;
       top: 0;
-      background-color: #cdeae2;
       z-index: 1000;
-      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
-    }
-    .nav-container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
     }
     .nav-logo {
+      font-size: 1.5rem;
       font-weight: 700;
-      font-size: 1.2rem;
-      color: #2e856e;
+      color: #fff;
       text-decoration: none;
-    }
-    .nav-toggle {
-      font-size: 1.8rem;
-      cursor: pointer;
-      display: none;
-      color: #2e856e;
-    }
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
     }
     .nav-links a {
+      margin-left: 1.5rem;
       text-decoration: none;
-      color: #2e856e;
-      font-weight: 600;
-      transition: color 0.3s ease;
+      color: #fff;
+      font-weight: 500;
     }
-    .nav-links a:hover {
-      color: #145f4a;
-    }
-    @media (max-width: 768px) {
-      .nav-toggle {
-        display: block;
-      }
-      .nav-links {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        background-color: #cdeae2;
-        padding: 1rem 0;
-      }
-      body.nav-open .nav-links {
-        display: flex;
-      }
-      .nav-links a {
-        padding: 0.5rem 1rem;
-        text-align: center;
-      }
-    }
-    main {
-      max-width: 900px;
-      margin: auto;
+    .container {
+      max-width: 400px;
+      margin: 5rem auto;
+      background-color: rgba(255,255,255,0.1);
       padding: 2rem;
+      border-radius: 10px;
       text-align: center;
     }
-    .poster {
-      background: url('https://images.unsplash.com/photo-1521335629791-ce4aec67dd47?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-      color: white;
-      padding: 6rem 2rem;
-      border-radius: 10px;
-      margin-bottom: 2rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    }
-    .poster h2 {
-      font-size: 3rem;
-      margin: 0;
-    }
-    .poster p {
-      font-size: 1.5rem;
-      margin-top: 1rem;
-    }
-    .newsletter {
-      margin-top: 3rem;
-      background: #eef8f3;
-      padding: 2rem;
-      border-radius: 10px;
-    }
-    .newsletter h3 {
-      margin-bottom: 1rem;
-      color: #2e856e;
-    }
-    .newsletter input[type="email"] {
+    input {
+      width: 100%;
       padding: 0.75rem;
-      width: 70%;
-      max-width: 300px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    .newsletter button {
-      padding: 0.75rem 1.5rem;
-      background-color: #2e856e;
-      color: white;
+      margin: 0.5rem 0;
       border: none;
       border-radius: 5px;
-      font-weight: bold;
-      margin-left: 1rem;
+    }
+    button {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #00ffc3;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      font-weight: 600;
       cursor: pointer;
     }
-    .newsletter button:hover {
-      background-color: #1c5f4f;
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: rgba(0,0,0,0.6);
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Events at Aloha Healing Center</h1>
-  </header>
   <nav class="navbar">
-    <div class="nav-container">
-      <a href="/index.html" class="nav-logo">Aloha</a>
-      <div class="nav-toggle" onclick="document.body.classList.toggle('nav-open')">☰</div>
-      <div class="nav-links">
-        <a href="/index.html">Home</a>
-        <a href="/eesystem.html">EESystem Info</a>
-        <a href="/session-preparation.html">Preparation</a>
-        <a href="/bookings.html">Bookings</a>
-        <a href="/about.html">About</a>
-        <a href="/contact.html">Contact</a>
-        <a href="/events.html">Events</a>
-      </div>
+    <a href="/index.html" class="nav-logo">Aloha</a>
+    <div class="nav-links">
+      <a href="/eesystem.html">EESystem</a>
+      <a href="/session-preparation.html">Preparation</a>
+      <a href="/bookings.html">Bookings</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/events.html">Events</a>
     </div>
   </nav>
-  <main>
-    <div class="poster">
-      <h2>🌺 Grand Opening Coming Soon!</h2>
-      <p>Celebrate the launch of Aloha Healing Center and be part of a new wellness journey.</p>
-    </div>
 
-    <div class="newsletter">
-      <h3>Subscribe for Grand Opening Updates</h3>
-      <form action="https://sibforms.com/serve/MUIFAPXFKp6ArdW9gjni_PZ9v526d5zUWhnFtvGy87YPUmwVZ178WaXVNR7IQoIl8VO9tiSFWycg622PZ1ydEHDNhSE5xmbD0Frp8wc4c_tjLrKC2ho2PDKFc4P6dKhhaYBxvYm2YW2QL19eyZ8K-SztdvfpROS2NeTy7jIDrapi91y5VAHQSu8vfG-TE54_86MM-z7qURot_O9K" method="POST" target="_blank">
-        <input type="email" name="EMAIL" placeholder="Your email address" required />
-        <button type="submit">Notify Me</button>
-      </form>
-    </div>
-  </main>
-  <footer>
+  <div class="container">
+    <h2>Client Login</h2>
+    <form id="login-form">
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="password" name="password" placeholder="Password" required />
+      <button type="submit">Log In</button>
+    </form>
+    <p><a href="/reset-password.html" style="color:#00ffc3;">Forgot password?</a></p>
+  </div>
+
+  <footer class="footer">
     <p>&copy; 2025 Aloha Healing Center. All rights reserved.</p>
   </footer>
-  <script>
-    document.addEventListener('click', (e) => {
-      if (!e.target.closest('.nav-container')) {
-        document.body.classList.remove('nav-open');
-      }
-    });
-  </script>
+
+  <script type="module" src="/scripts/portal.js"></script>
 </body>
 </html>
