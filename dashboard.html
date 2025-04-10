@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Aloha Healing Center</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: #f0f9f6;
+      color: #333;
+    }
+    header {
+      background-color: #2e856e;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    nav {
+      background-color: #fff;
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    nav .logo {
+      font-weight: 700;
+      color: #2e856e;
+      text-decoration: none;
+    }
+    nav button {
+      background: #e34f4f;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+    .welcome {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .welcome h2 {
+      color: #2e856e;
+    }
+    .grid {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    }
+    .card h3 {
+      color: #2e856e;
+      margin-top: 0;
+    }
+    .card p {
+      margin: 0.5rem 0 1rem;
+    }
+    .card a {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: #2e856e;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Aloha Healing Center Portal</h1>
+  </header>
+
+  <nav>
+    <a href="/index.html" class="logo">Aloha</a>
+    <button onclick="logoutUser()">Log Out</button>
+  </nav>
+
+  <div class="container">
+    <div class="welcome">
+      <h2>Welcome, <span id="userEmail">User</span></h2>
+      <p>Manage your bookings, view upcoming sessions, and stay connected with Aloha Healing Center.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>📅 My Appointments</h3>
+        <p>View and manage your upcoming EESystem sessions.</p>
+        <a href="https://calendly.com/admin-aloha-center">View Bookings</a>
+      </div>
+      <div class="card">
+        <h3>💌 Newsletter</h3>
+        <p>Make sure you’re signed up to receive our latest updates and offers.</p>
+        <a href="/index.html#newsletter">Subscribe</a>
+      </div>
+      <div class="card">
+        <h3>📖 Session Preparation</h3>
+        <p>Tips to get the most out of your experience before, during, and after.</p>
+        <a href="/session-preparation.html">Read Tips</a>
+      </div>
+      <div class="card">
+        <h3>📍 Center Info</h3>
+        <p>Find our address, hours, and contact details.</p>
+        <a href="/contact.html">Contact Us</a>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    import { auth, signOut, onAuthStateChanged } from './scripts/firebase-config.js';
+
+    const userEmailDisplay = document.getElementById("userEmail");
+
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        userEmailDisplay.textContent = user.email;
+      } else {
+        window.location.href = "/portal.html";
+      }
+    });
+
+    window.logoutUser = () => {
+      signOut(auth)
+        .then(() => {
+          window.location.href = "/portal.html";
+        })
+        .catch((error) => {
+          alert("Error signing out: " + error.message);
+        });
+    }
+  </script>
+</body>
+</html>
