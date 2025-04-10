@@ -3,126 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Login to the Aloha Healing Center portal to manage your bookings and account." />
-  <title>Customer Portal | Aloha Healing Center</title>
+  <meta name="description" content="Explore how the Energy Enhancement System (EESystem) works and its scientifically supported health benefits at Aloha Healing Center." />
+  <title>EESystem Info | Aloha Healing Center</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      background: linear-gradient(135deg, #e3fcec, #f9fdfc);
-      color: #333;
-    }
-    header, footer {
-      background-color: #d0f0e0;
-      padding: 1.5rem;
-      text-align: center;
-    }
-    .navbar {
-      background-color: #cdeae2;
-      padding: 1rem;
-      text-align: center;
-      box-shadow: 0 1px 5px rgba(0,0,0,0.05);
-    }
-    .navbar a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #2e856e;
-      font-weight: 600;
-    }
-    main {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      min-height: 80vh;
-      padding: 2rem;
-    }
-    .portal-box {
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.05);
-      max-width: 400px;
-      width: 100%;
-      text-align: center;
-    }
-    .portal-box h2 {
-      color: #2e856e;
-      margin-bottom: 1rem;
-    }
-    input[type="email"],
-    input[type="password"] {
-      width: 100%;
-      padding: 0.75rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-    button {
-      background-color: #2e856e;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 6px;
-      font-weight: 600;
-      cursor: pointer;
-      width: 100%;
-    }
-    button:hover {
-      background-color: #1c5f4f;
-    }
-    .portal-footer {
-      margin-top: 1rem;
-      font-size: 0.9rem;
-    }
-    .portal-footer a {
-      color: #2e856e;
-      text-decoration: none;
-    }
-  </style>
+  <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
   <header>
-    <h1>Aloha Healing Center Portal</h1>
+    <h1>About the Energy Enhancement System</h1>
   </header>
-
   <nav class="navbar">
-    <a href="/index.html">Home</a>
-    <a href="/bookings.html">Bookings</a>
-    <a href="/about.html">About</a>
-    <a href="/contact.html">Contact</a>
-  </nav>
-
-  <main>
-    <div class="portal-box">
-      <h2>Login to Your Account</h2>
-      <form id="loginForm">
-        <input type="email" id="email" placeholder="Email" required />
-        <input type="password" id="password" placeholder="Password" required />
-        <button type="submit">Log In</button>
-      </form>
-      <div class="portal-footer">
-        <p><a href="#">Forgot password?</a> | <a href="#">Create an account</a></p>
+    <div class="nav-container">
+      <a href="/index.html" class="nav-logo">Aloha</a>
+      <div class="nav-toggle" onclick="document.body.classList.toggle('nav-open')">☰</div>
+      <div class="nav-links">
+        <a href="/index.html">Home</a>
+        <a href="/eesystem.html">EESystem Info</a>
+        <a href="/session-preparation.html">Preparation</a>
+        <a href="/bookings.html">Bookings</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/events.html">Events</a>
       </div>
     </div>
+  </nav>
+  <main>
     <section>
-    <h2>Watch the EESystem in Action</h2>
-    <p style="text-align:center; max-width: 800px; margin: auto;">
-      Discover how the Energy Enhancement System is transforming wellness around the world.
-    </p>
-    <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; max-width:100%; border-radius: 10px; margin-top: 1.5rem; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-      <iframe src="https://www.youtube.com/embed/9krozcwQ8Rk"
-              frameborder="0"
-              allowfullscreen
-              style="position:absolute; top:0; left:0; width:100%; height:100%;">
-      </iframe>
-    </div>
-  </section>
-</main>
+      <h2>What is the EESystem?</h2>
+      <p>The Energy Enhancement System (EESystem) generates multiple bio-active life-enhancing energy fields, including scalar waves and biophotonic light, to promote optimal wellness. Developed by Dr. Sandra Rose Michael, it combines quantum science and ancient healing wisdom to elevate the human experience and support the body's ability to heal itself.</p>
+    </section>
 
+    <section>
+      <h2>How It Works</h2>
+      <ul>
+        <li>💡 Generates scalar energy fields that support DNA repair, detox, and anti-aging benefits.</li>
+        <li>🌈 Incorporates color and light therapy to balance the energetic and physical body.</li>
+        <li>🔬 Based on principles of sacred geometry and quantum coherence.</li>
+        <li>⚡ Enhances mitochondrial function, energy levels, and mental clarity.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Research Highlights</h2>
+      <p>Scientific and experiential evidence suggests that regular exposure to EESystem sessions may contribute to:</p>
+      <ul>
+        <li>Improved circulation, oxygenation, and cellular hydration</li>
+        <li>Detoxification at a deep energetic level</li>
+        <li>Enhanced immune function and recovery</li>
+        <li>Increased cellular voltage and repair capability</li>
+        <li>Better sleep, reduced inflammation, and a calm mental state</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Watch the EESystem in Action</h2>
+      <p>Discover how the Energy Enhancement System is transforming wellness around the world.</p>
+      <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; max-width:100%; border-radius: 10px; margin-top: 1.5rem; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+        <iframe src="https://www.youtube.com/embed/9krozcwQ8Rk" frameborder="0" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+      </div>
+    </section>
+  </main>
   <footer>
     <p>&copy; 2025 Aloha Healing Center. All rights reserved.</p>
   </footer>
+  <script>
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.nav-container')) {
+        document.body.classList.remove('nav-open');
+      }
+    });
+  </script>
 </body>
 </html>
